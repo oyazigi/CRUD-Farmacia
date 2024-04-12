@@ -25,7 +25,6 @@ import jakarta.validation.constraints.NotNull;
 		@NotNull(message = "O Atributo Descrição é obrigatório")
 		private String descricao;
 		
-		@OneToMany(fetch = FetchType.LAZY, mappedBy = "categoria", cascade = CascadeType.REMOVE)
 		@JsonIgnoreProperties("categoria")
 		private List<Categoria> categoria;
 

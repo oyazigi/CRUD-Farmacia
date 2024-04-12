@@ -1,9 +1,5 @@
 package com.generation.farmacia.model;
 
-import java.util.List;
-
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -38,11 +34,4 @@ import jakarta.validation.constraints.NotNull;
 			this.descricao = descricao;
 		}
 
-		public List<Categoria> getCategoria() {
-			return categoria;
-		}
-
-		public void setPostagem(List<Categoria> categoria) {
-			this.categoria = categoria;
-		}
 }

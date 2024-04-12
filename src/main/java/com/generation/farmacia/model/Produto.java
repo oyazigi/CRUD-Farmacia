@@ -25,54 +25,50 @@ public class Produto {
 	
 	@NotBlank(message = "O atributo título é Obrigatório!") 
 	@Size(min = 5, max = 100, message = "O atributo título deve conter no mínimo 05 e no máximo 100 caracteres")
-	private String titulo;
+	private String nome;
 	
 	@NotBlank(message = "O atributo texto é Obrigatório!")
 	@Size(min = 10, max = 1000, message = "O atributo texto deve conter no mínimo 10 e no máximo 1000 caracteres")
-	private String texto;
+	private String descricao;
 	
 	@UpdateTimestamp
 	private LocalDateTime data;
 	
 	@ManyToOne
 	@JsonIgnoreProperties("produto")
-	private Produto produto;
-	
-	@ManyToOne
-	@JsonIgnoreProperties("produto")
 	private Categoria categoria;
 
-    public Long getId() {
-        return this.id;
-    }
+	public Long getId() {
+		return id;
+	}
 
-    public void setId(Long id) {
-        this.id = id;
-    }
+	public void setId(Long id) {
+		this.id = id;
+	}
 
-    public String getTitulo() {
-        return this.titulo;
-    }
+	public String getNome() {
+		return nome;
+	}
 
-    public void setTitulo(String titulo) {
-        this.titulo = titulo;
-    }
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
 
-    public String getTexto() {
-        return this.texto;
-    }
+	public String getDescricao() {
+		return descricao;
+	}
 
-    public void setTexto(String texto) {
-        this.texto = texto;
-    }
+	public void setDescricao(String descricao) {
+		this.descricao = descricao;
+	}
 
-    public LocalDateTime getData() {
-        return this.data;
-    }
+	public LocalDateTime getData() {
+		return data;
+	}
 
-    public void setData(LocalDateTime data) {
-        this.data = data;
-    }
+	public void setData(LocalDateTime data) {
+		this.data = data;
+	}
 
 	public Categoria getCategoria() {
 		return categoria;
@@ -81,6 +77,8 @@ public class Produto {
 	public void setCategoria(Categoria categoria) {
 		this.categoria = categoria;
 	}
+
+
 
 
 }

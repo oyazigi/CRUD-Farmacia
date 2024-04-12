@@ -6,6 +6,6 @@ import com.generation.farmacia.model.Produto;
 
 public interface ProdutoRepository extends JpaRepository<Produto, Long>{
 	
-    List<Produto> findAllByTituloContainingIgnoreCase(@Param("titulo") String titulo);
+    List<Produto> findAllByNomeContainingIgnoreCase(@Param("nome") String nome);
     
 }
